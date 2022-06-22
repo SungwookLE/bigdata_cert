@@ -1,4 +1,4 @@
-def plot_box_per_column(df, columns):
+def plot_box_per_column(df, columns, ratio_IQR = 1.5):
     import matplotlib.pyplot as plt
     plt.figure()
     for idx, col in enumerate(columns):
@@ -12,7 +12,7 @@ def plot_box_per_column(df, columns):
     print(f"before: length is {len(df)}")
     for col in columns:
         col_IQR = df[col].quantile(0.75) - df[col].quantile(0.25)
-        df=df.loc[df[col].between(df[col].quantile(q=0.25)-1.5*col_IQR, df[col].quantile(q=0.75)+1.5*col_IQR)]
+        df=df.loc[df[col].between(df[col].quantile(q=0.25)-ratio_IQR*col_IQR, df[col].quantile(q=0.75)+ratio_IQR*col_IQR)]
 
     print(f"after: length is {len(df)}")
 

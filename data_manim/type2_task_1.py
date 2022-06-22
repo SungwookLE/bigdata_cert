@@ -152,6 +152,10 @@ x_train, x_val, y_train, y_val = train_test_split(
     x_train_scaled, y_train, stratify=y_train, test_size=0.3)
 
 print("3-1. train_test_split")
+
+print(type(y_train))
+print(y_train)
+
 print(f"x_train {x_train.shape}, x_val {x_val.shape}, y_train {y_train.shape}, y_val {y_val.shape}")
 print(y_train.head())
 

@@ -26,6 +26,8 @@
 ### 2-4. numerical 데이터 skewness 줄이기
 - numerical data의 skewness줄이기
 - `from scipy.stats import skew`
+- skewness를 줄이기위해 `np.log1p`를 많이 사용하는데 로그함수는 음수에서 `NaN`이 출력됨. 즉 값에 음수가 섞여있다면 `np.log1p` 연산시 `NaN`이 나오게 될 수 있으므로 주의할 것
+- ![](img/2022-06-22-21-34-19.png)
 
 ### 2-5. outlier 값 제거하기
 - *train dataset*을 대상으로만 제거할것
@@ -66,7 +68,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 from sklearn.pipeline import make_pipeline
-from sklearn.preprocessing import StandardScaler, RobustScaler
+from sklearn.preprocessing import StandardScaler, RobustScaler, MinMaxScaler
 ```
 
 ## 4. 분석 및 시각화
@@ -86,5 +88,8 @@ print(roc_auc)
 ## 5. 코드 예시
 - 주석을 참고하며, 상기 플로우에 따라 문제를 풀었을 때의 방식을 참고해보자.
 - [코드](./data_manim/type2_task_1.py)
+
+- 테스트케이스에서의 성능이 너무 낮으면 roc-auc score가 낮으니, 너무 단순하게 모델 하나 하고 끝내버리면 안되는듯함 (6/21)
+- 관련하여 강의를 하나 샘플로 들어보자. 갈라파고스화되면 안되니까
 
 ---
