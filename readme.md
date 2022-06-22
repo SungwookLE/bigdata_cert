@@ -22,6 +22,7 @@
 
 ### 2-3. categorical 데이터의 one-hot 인코딩
 - catergorical: `pd.get_dummies()` 또는 `LabelEncoder`를 활용하여 missing 데이터 없애고, one-hot encoding 해주기
+- `from sklearn.preprocessing import LabelEncoder`
 
 ### 2-4. numerical 데이터 skewness 줄이기
 - numerical data의 skewness줄이기
@@ -47,6 +48,7 @@ y_train = y_train.loc[x_train.index]
 - 필요하다면
 
 ## 3. 모델링
+- 모델 선택 가이드: [sklearn](https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html)
 - Dataset: `train_test_split`
 - CrossValidation using `cross_val_score, KFold`
 - Preprocessing: `StandardScaler, RobustScaler`
