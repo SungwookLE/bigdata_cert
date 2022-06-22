@@ -55,7 +55,7 @@ y_train = y_train.loc[x_train.index]
 - Preprocessing: `StandardScaler, RobustScaler, LabelEncoder, MinMaxScaler`
     - `from sklearn.preprocessing import StandardScaler, MinMaxScaler, LabelEncoder`
 - [Regressor](https://scikit-learn.org/stable/search.html?q=Regress): `LinearRegression, RidgeCV, LassoCV, ElasticNetCV...`
-- [Classifier](https://scikit-learn.org/stable/search.html?q=classifier): `KNeighborsClassifier, RandomForestClassifier, `GradientBoostingClassifier`...`
+- [Classifier](https://scikit-learn.org/stable/search.html?q=classifier): `KNeighborsClassifier, RandomForestClassifier, GradientBoostingClassifier ...`
     - `from xgboost import XGBClassifier`
 - Easy modeling: `make_pipeline`
 ```
