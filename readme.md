@@ -51,9 +51,12 @@ y_train = y_train.loc[x_train.index]
 - 모델 선택 가이드: [sklearn](https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html)
 - Dataset: `train_test_split`
 - CrossValidation using `cross_val_score, KFold`
-- Preprocessing: `StandardScaler, RobustScaler`
+    - `from sklearn.model_selection import train_test_split, KFold, cross_val_score`
+- Preprocessing: `StandardScaler, RobustScaler, LabelEncoder, MinMaxScaler`
+    - `from sklearn.preprocessing import StandardScaler, MinMaxScaler, LabelEncoder`
 - [Regressor](https://scikit-learn.org/stable/search.html?q=Regress): `LinearRegression, RidgeCV, LassoCV, ElasticNetCV...`
-- [Classifier](https://scikit-learn.org/stable/search.html?q=classifier): `KNeighborsClassifier, RandomForestClassifier, ...`
+- [Classifier](https://scikit-learn.org/stable/search.html?q=classifier): `KNeighborsClassifier, RandomForestClassifier, `GradientBoostingClassifier`...`
+    - `from xgboost import XGBClassifier`
 - Easy modeling: `make_pipeline`
 ```
 k_fold = KFold(n_splits = 10, shuffle = True, random_state = 0)
